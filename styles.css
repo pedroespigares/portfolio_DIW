@@ -1,0 +1,660 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Rubik:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&display=swap');
+
+
+*,
+*::before,
+*::after {
+  margin: 0;
+}
+
+:root{
+    box-sizing: border-box;
+    font-size: 62.5%;
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.8;
+    --primary-color: #020202;
+    --secondary-color: white;
+    --tertiary-color: #86868B;
+    --quaternary-color: #1561F0;
+    --title-font-weight: 700;    
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+h2{
+    color: var(--quaternary-color);
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 7rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    margin-bottom: 10rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.opacity_animation{
+    animation: opacityAnimation 1.2s ease-in-out forwards;
+}
+
+.opacity_animation_mini{
+    animation: opacityAnimation 0.5s ease-in-out forwards;
+}
+
+
+
+
+/* ----------------------------------------------------------------------------------------- */
+
+/* Le ponemos display flex al body para tener el aside y el main diferenciados*/
+
+
+body{
+    display: flex;
+}
+
+
+/* ----------------------------------------------------------------------------------------- */
+
+
+/* Ponemos los estilos a la cabecera y el menú */
+
+main{
+    width: 95vw;
+    flex: 1;
+}
+
+
+header{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    
+    width: 100%;
+    height: 10vh;
+    background-color: var(--primary-color);
+}
+
+.logo h1{
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-left: 4rem;
+    font-style: italic;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo h1:hover{
+    color: var(--quaternary-color);
+    transition: 0.2s;
+    opacity: 0.8;
+}
+
+ul.menu{
+    display: flex;
+    gap: 2.5em;
+    font-size: 2rem;
+    margin-right: 7rem;
+}
+
+ul.menu li{
+    list-style: none;
+}
+
+ul.menu li a{
+    text-decoration: none;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+
+ul.menu li a:hover{
+    color: var(--primary-color);
+    background-color: white;
+    border-radius: 0.5rem;
+    opacity: 0.7;
+    transition: 0.2s;
+}
+
+ul.menu li a:visited{
+    color: var(--tertiary-color);
+}
+
+ul.menu li a:active{
+    color: var(--quaternary-color);
+}
+
+.checkbtn{
+    float: right;
+    font-size: 2rem;
+    margin-right: 8rem;
+    cursor: pointer;
+    line-height: 3.8em;
+    display: none;
+}
+
+/* ----------------------------------------------------------------------------------------- */
+/* Estilos para aside */
+
+aside{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 5vw;
+    height: 100vh;
+
+    top: 0;
+    position: sticky;
+    
+
+    background-color: var(--primary-color);
+}
+
+aside a.icon{
+    margin-bottom: 5em;
+}
+
+i{
+    color: white;
+    scale: 3;
+}
+
+aside i:hover{
+    color: var(--quaternary-color);
+    transition: 0.2s;
+    opacity: 0.8;
+    scale: 3.5;
+}
+
+
+/* ----------------------------------------------------------------------------------------- */
+
+/* Estilos para section #home */
+
+section{
+    height: 100vh;
+    background-color: var(--primary-color);
+    color:white;
+}
+
+
+#home{
+    height: 90vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    text-align: center;
+
+    background-image: url("media/laptop.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+div.homeContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--primary-color);
+
+    width: 35vw;
+    height: 50vh;
+
+    margin-top: 5rem;
+    font-size: 4em;
+}
+
+h2#title{
+    color: var(--quaternary-color);
+    text-transform: uppercase;
+    font-size: 8rem;
+    font-weight: 700;
+    letter-spacing: 0.2rem;
+    margin-bottom: 2rem;
+}
+
+/* ----------------------------------------------------------------------------------------- */
+
+/* Estilos para section #about */
+
+#about{
+    display: flex;
+    flex-flow: row wrap; 
+    justify-content: space-evenly;
+    align-items: center;
+
+    gap: 4rem;
+    text-align: justify;
+}
+
+#about img{
+    width: 25%;
+    height: 50vh;
+    margin-top: 5rem;
+    opacity: 0;
+}
+
+.about-me--text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: justify;
+
+    width: 65%;
+    height: 50vh;
+
+    opacity: 0;
+}
+
+
+.about-me--text p{
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 2rem;
+}
+
+
+/* ----------------------------------------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------------------------------------- */
+
+/* Estilos para section #projects */
+
+#projects{
+
+    /* La altura será un poco mayor a la vista porque si no no caben todos los trabajos */
+
+    height: 130vh;
+}
+
+div.works-container{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+div.single-work-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--secondary-color);
+    width: 30vw;
+    height: 50vh;
+}
+
+div.single-work-container img:hover{
+    box-shadow: 0px 1px 2px 0px var(--quaternary-color),
+            1px 2px 4px 0px var(--quaternary-color),
+            2px 4px 8px 0px var(--quaternary-color),
+            2px 4px 16px 0px var(--quaternary-color);
+    scale: 1.1;
+    transition: 0.2s;
+}
+
+div.single-work-container > a{
+    width: 80%;
+    height: 50%;
+}
+
+div.single-work-container img{
+    width: 100%;
+    height: 100%;
+    border-radius: 2rem;
+    border: 1px solid black;
+}
+
+div.single-work-container img[alt="Pong Game"]{
+
+    /* Le ponemos borde blanco ya que la imagen es negra y no se diferencia del bordo */
+
+    border: 1px solid var(--secondary-color);
+}
+
+div.single-work-container h3{
+    font-size: 3rem;
+    font-weight: 700;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+div.single-work-container p{
+    font-size: 1.5rem;
+    font-weight: 400;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+/* ----------------------------------------------------------------------------------------- */
+
+
+/* ----------------------------------------------------------------------------------------- */
+
+/* Estilos para section #skills */
+
+#skills{
+    height: 110vh
+}
+
+.skills-class{
+
+    /* Division de las skills en 2 columnas */
+
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin-top: 20rem;
+}
+
+.frontend-skills, .backend-skills{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 30vw;
+    height: 50vh;
+    color: var(--secondary-color);
+}
+
+.skills-class h3{
+    font-size: 4rem;
+    font-weight: 700;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+    font-style: italic;
+    text-transform: uppercase;
+}
+
+
+.skills, .progress-bar{
+    height: 2rem;
+    border-radius: 2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 400;
+    padding-bottom: 2rem;
+    background-color: var(--quaternary-color);
+}
+
+.progress-bar{
+    width: 80%;
+    background-color: var(--tertiary-color);
+}
+
+
+.skill-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 2rem;
+    align-items: center;
+}
+
+.skill-title img{
+    width: 10%;
+}
+
+.skill-title h4{
+    font-size: 2rem;
+    font-weight: 700;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    text-align: center;
+}
+
+.p_percentage{
+    text-align: right;
+    padding-right: 1rem;
+    padding-top: 0.1em;
+}
+
+/* Ponemos las animaciones correspondientes a cada progress bar */
+
+.progress-bar--html{
+    width: 80%;
+    animation: progressBarAnimation_FE_1 1.2s ease-in-out;
+}
+
+.progress-bar--css{
+    width: 60%;
+    animation: progressBarAnimation_FE_2 1.2s ease-in-out;
+}
+
+.progress-bar--js{
+    width: 85%;
+    animation: progressBarAnimation_FE_3 1.2s ease-in-out;
+}
+
+.progress-bar--react{
+    width: 25%;
+    animation: progressBarAnimation_FE_4 1.2s ease-in-out;
+}
+
+.progress-bar--python{
+    width: 50%;
+    animation: progressBarAnimation_BE_1 1.2s ease-in-out;
+}
+
+.progress-bar--php{
+    width: 67%;
+    animation: progressBarAnimation_BE_2 1.2s ease-in-out;
+}
+
+.progress-bar--mysql{
+    width: 90%;
+    animation: progressBarAnimation_BE_3 1.2s ease-in-out;
+}
+
+.progress-bar--node{
+    width: 35%;
+    animation: progressBarAnimation_BE_4 1.2s ease-in-out;
+}
+/* ----------------------------------------------------------------------------------------- */
+
+/* Estilos para la seccion #services */
+
+#services{
+    height: 100vh;
+}
+
+.servicesContainer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.single-service{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 30vw;
+    height: 35vh;
+    color: var(--primary-color);
+    background-color: var(--secondary-color);
+    opacity: 0.9;
+}
+
+.single-service p{
+    font-size: 2rem;
+    font-weight: 400;
+    text-align: center;
+    margin-left: 2rem;
+    margin-right: 2rem;
+}
+
+.single-service p span{
+    font-size: 2.1rem;
+    font-weight: 700;
+    color: var(--quaternary-color);
+}
+
+.service--title{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 40%;
+    gap: 1rem;
+}
+
+.service--title h3{
+    font-size: 3rem;
+    flex: 1;
+    font-weight: 700;
+    padding-top: 2rem;
+    font-style: italic;
+    text-transform: uppercase;
+    width: 100%;
+}
+
+.service--title i{
+    color : var(--quaternary-color);
+    font-size: 2rem;
+    width: 10%;
+}
+
+/* ----------------------------------------------------------------------------------------- */
+
+/* Estilos para #testimonies */
+
+#testimonials{
+    height: 135vh;
+}
+
+.testimoniesContainer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.singleTestimonie{
+    width: 45vw;
+    height: 50vh;
+    position: relative;
+    cursor: pointer;
+}
+
+.singleTestimonie img{
+    width: 100%;
+    height: 100%;
+}
+
+.card--info{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 2rem;
+    
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    background-color: var(--primary-color);
+    color: white;
+    transform: scaleX(0);
+    opacity: 0.8;
+    transform-origin: left;
+    transition: transform 0.5s ease-in-out;
+}
+
+.singleTestimonie:hover > .card--info{
+    transform: scaleX(1);
+}
+
+/* ----------------------------------------------------------------------------------------- */
+
+/* Estilos para #contact */
+
+#contact{
+    height: 115vh;
+}
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    /* width: 50vw; */
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 1.5rem;
+}
+
+form > label{
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+form > input, form > textarea{
+    font-size: 2rem;
+    font-weight: 400;
+    padding: 1rem;
+    border: 1px solid var(--primary-color);
+    border-radius: 0.5rem;
+    resize: none;
+}
+
+form > input[type="submit"]{
+    background-color: var(--quaternary-color);
+    color: var(--secondary-color);
+    width: 20%;
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+form > input:focus, form > textarea:focus{
+    outline: none;
+    border: 2px solid var(--quaternary-color);
+}
+
+form > input[type="submit"]:hover{
+    background-color: var(--secondary-color);
+    color: var(--quaternary-color);
+}
+
+input[name="email"]:invalid{
+    border: 2px solid red;
+}
+
+input[name="email"]:valid{
+    border: 2px solid green;
+}
+
+/* ----------------------------------------------------------------------------------------- */

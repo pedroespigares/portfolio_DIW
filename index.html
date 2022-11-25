@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Pedro Espigares</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="media_querys.css">
+    <link rel="stylesheet" href="animations.css">
+    <link rel="icon" type="image/x-icon" href="media/favicon.ico">
+    <script src="https://kit.fontawesome.com/4328465e5b.js" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <aside>
+        <a href="https://twitter.com/pedro_espigares" target="_blank" class="icon">
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/pedro-espigares-asenjo/" target="_blank" class="icon">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/pedroespigares" target="_blank" class="icon">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://instagram.com/pedro_espigares" target="_blank" class="icon">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+    </aside>
+    <main>
+        <header>
+            <a href="#" class="logo">
+                <h1>Pedro Espigares</h1>
+            </a>
+            <nav>
+                <div class="checkbtn">
+                    <div class="hamburger-lines">
+                        <span class="line line1"></span>
+                        <span class="line line2"></span>
+                        <span class="line line3"></span>
+                    </div> 
+                </div>
+                <ul class="menu">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <section id="home">
+            <div class="homeContainer">
+                <h2 id="title">Hi! I'm Pedro</h2>
+                <p>Web Developer</p>
+                <p>This is my portfolio</p>
+            </div>
+        </section>
+
+        <section id="about">
+            <img src="media/hombre_escribiendo.png" alt="Typing men image" id="typing_men">
+            <div class="about-me--text">
+                <h2>About Me</h2>
+                <p>My name is Pedro Espigares and I am a web developer currently living in Granada, Spain. 
+                    I'm a fullstack developer, so I'm good in both backend and frontend. Databases are my favorite thing 
+                    in web development.
+                </p>
+                <p>
+                    I'm also a computer technician, so any technical problem that a device has I can solve (although it's always heavy to do).
+                </p>
+            </div>
+        </section>
+
+        <section id="projects">
+            <h2>Here are some of my works</h2>
+            <div class="works-container">
+                <div class="single-work-container">
+                    <a href="https://github.com/pedroespigares/DWEC/tree/master/Tema%205/Pong" target="_blank">
+                        <img src="media/pong.png" draggable="false" alt="Pong Game">
+                    </a>
+                    <h3>Pong</h3>
+                    <p>A pong game made with JavaScript</p>
+                </div>
+                <div class="single-work-container">
+                    <a href="https://github.com/pedroespigares/JS_hangman" target="_blank">
+                        <img src="media/hangman.png" draggable="false" alt="Hangman Game">
+                    </a>
+                    <h3>Hangman</h3>
+                    <p>A hangman game made with JavaScript</p>
+                </div>
+                <div class="single-work-container">
+                    <a href="https://github.com/pedroespigares/JS_MemoryGame" target="_blank">
+                        <img src="media/memory_game.png" draggable="false" alt="Memory Game">
+                    </a>
+                    <h3>Memory Game</h3>
+                    <p>A memory game made with JavaScript</p>
+                </div>
+                <div class="single-work-container">
+                    <a href="https://github.com/pedroespigares/JS_stopwatch" target="_blank">
+                        <img src="media/stopwatch.png" draggable="false" alt="Stopwatch">
+                    </a>
+                    <h3>Stopwatch</h3>
+                    <p>A stopwatch made with JavaScript</p>
+                </div>
+                <div class="single-work-container">
+                    <a href="https://github.com/pedroespigares/emergency-management" target="_blank">
+                        <img src="media/emergency.jpg" draggable="false" alt="Emergency Management">
+                    </a>
+                    <h3>Urgency Management</h3>
+                    <p>A python program with database access</p>
+                </div>
+                <div class="single-work-container">
+                    <a href="https://github.com/pedroespigares/JS_GroceryBud" target="_blank">
+                        <img src="media/grocery.png" draggable="false" alt="Grocery Bud">
+                    </a>
+                    <h3>Grocery Bud</h3>
+                    <p>A grocery bud made with JavaScript</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>My Skills</h2>
+            <div class="skills-class">
+                <div class="frontend-skills">
+                    <h3>Frontend</h3>
+                    <div class="skill-title">
+                        <h4>HTML5</h4>
+                        <img src="media/skills_icons/html.svg" alt="HTML icon">
+                    </div>
+                        <div class="progress-bar">
+                            <div id="html" class="skills">
+                                <p class="p_percentage p_animation">80%</p>
+                            </div>
+                        </div>
+
+                    <div class="skill-title">
+                        <h4>CSS3</h4>
+                        <img src="media/skills_icons/css.svg" alt="CSS icon">
+                    </div>
+                        <div class="progress-bar">
+                            <div id="css" class="skills">
+                                <p class="p_percentage">60%</p>
+                            </div>
+                        </div>
+
+                    <div class="skill-title">
+                        <h4>JavaScript</h4>
+                        <img src="media/skills_icons/javascript.svg" alt="JavaScript icon">
+                    </div>
+                        <div class="progress-bar">
+                            <div id="js" class="skills">
+                                <p class="p_percentage">85%</p>
+                            </div>
+                        </div>
+
+                    <div class="skill-title">
+                        <h4>React</h4>
+                        <img src="media/skills_icons/react.svg" alt="React icon">
+                    </div>
+                        <div class="progress-bar">
+                            <div id="react" class="skills">
+                                <p class="p_percentage">25%</p>
+                            </div>
+                        </div>
+
+                </div>
+                <div class="backend-skills">
+                    <h3>Backend</h3>
+                    <div class="skill-title">
+                        <h4>Python</h4>
+                        <img src="media/skills_icons/python.svg" alt="Python icon">
+                    </div>
+                        <div class="progress-bar">
+                            <div id="python" class="skills">
+                                <p class="p_percentage">50%</p>
+                            </div>
+                        </div>
+
+                    <div class="skill-title">
+                        <h4>PHP</h4>
+                        <img src="media/skills_icons/php.svg" alt="PHP icon">
+                    </div>
+                        <div class="progress-bar">
+                            <div id="php" class="skills">
+                                <p class="p_percentage">67%</p>
+                            </div>
+                        </div>
+
+                    <div class="skill-title">
+                        <h4>MySQL</h4>
+                        <img src="media/skills_icons/sql.svg" alt="MySQL icon">
+                    </div>
+                        <div class="progress-bar">
+                            <div id="sql" class="skills">
+                                <p class="p_percentage">90%</p>
+                            </div>
+
+                    </div>
+                    <div class="skill-title">
+                        <h4>NodeJS</h4>
+                        <img src="media/skills_icons/node.svg" alt="NodeJS icon">
+                    </div>
+                        <div class="progress-bar">
+                            <div id="node" class="skills">
+                                <p class="p_percentage">35%</p>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services">
+            <h2>Services</h2>
+            <div class="servicesContainer">
+                <div class="single-service">
+                    <div class="service--title">
+                        <i class="fa-solid fa-user"></i>
+                        <h3>Front End Developer</h3>
+                    </div>
+                    <p>I can use different <span>tools</span> and <span>frameworks</span> for front end development, like JavaScript, HTML and CSS</p>
+                </div>
+                <div class="single-service">
+                    <div class="service--title">
+                        <i class="fa-solid fa-server"></i>
+                        <h3>Back End Developer</h3>
+                    </div>
+                    <p>I can use different tools for back end development, having special interest in <span>databases</span></p>
+                </div>
+                <div class="single-service">
+                    <div class="service--title">
+                        <i class="fa-sharp fa-solid fa-pen-ruler"></i>
+                        <h3>UX / UI</h3>
+                    </div>
+                    <p>I can make the <span>UX</span> and <span>UI</span> of a web page, making it responsive and beautiful</p>
+                </div>
+                <div class="single-service">
+                    <div class="service--title">
+                        <i class="fa-solid fa-computer"></i>
+                        <h3>Computer Technician</h3>
+                    </div>
+                    <p>I can <span>fix</span>, <span>assemble</span> and <span>maintain</span> computer equipment. I can also suggest <span>quotes</span> for equipment</p>
+                </div>
+                <div class="single-service">
+                    <div class="service--title">
+                        <i class="fa-solid fa-network-wired"></i>
+                        <h3>Network Technician</h3>
+                    </div>
+                    <p>I can <span>set up</span>, <span>maintain</span> and <span>troubleshoot</span> different problems that may occur in a <span>computer network</span></p>
+                </div>
+                <div class="single-service">
+                    <div class="service--title">
+                        <i class="fa-brands fa-discord"></i>
+                        <h3>Discord Bots Developer</h3>
+                    </div>
+                    <p>I can <span>create</span> and <span>maintain</span> Discord bots with different functionalities and <span>implement</span> them on servers.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="testimonials">
+            <h2>Testimonies</h2>
+            <div class="testimoniesContainer">
+                <div class="singleTestimonie">
+                    <img src="media/testimonie_1.jpg" alt="Testimonie 1" class="card--img">
+                    <div class="card--info">
+                        <h3 class="card--title">Web Design</h3>
+                        <p class="card--text">He's a great web designer. I will contact him for other projects</p>
+                    </div>
+                </div>
+                <div class="singleTestimonie">
+                    <img src="media/testimonie_2.jpg" alt="Testimonie 2" class="card--img">
+                    <div class="card--info">
+                        <h3 class="card--title">Network Technician</h3>
+                        <p class="card--text">He assembled all our network and he did such a great work with our computers</p>
+                    </div>
+                </div>
+                <div class="singleTestimonie">
+                    <img src="media/testimonie_3.jpg" alt="Testimonie 3" class="card--img">
+                    <div class="card--info">
+                        <h3 class="card--title">Co-worker</h3>
+                        <p class="card--text">It has been a pleasure to work with. I will contact him again for future projects.</p>
+                    </div>
+                </div>
+                <div class="singleTestimonie">
+                    <img src="media/testimonie_4.jpg" alt="Testimonie 4" class="card--img">
+                    <div class="card--info">
+                        <h3 class="card--title">Computer Technician</h3>
+                        <p class="card--text">He did a great job with our equipment. We will rely on him to maintain them.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <div class="formContainer">
+                <form action="" method="POST" autocomplete="off">
+                    <label for="name">Your Name</label>
+                    <input type="text" name="name" required/>
+                    <label for="email">Your Email</label>
+                    <input type="text" name="email" placeholder="email@domain.com" required/>
+                    <label for="subject">Subject</label>
+                    <input type="text" name="subject" required/>
+                    <label for="message">Your Message</label>
+                    <textarea name="message" id="" cols="30" rows="10"></textarea>
+                    <input type="submit" value="Send" />
+                </form>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
