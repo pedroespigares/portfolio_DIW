@@ -137,7 +137,7 @@ ul.menu li a:active{
 }
 
 .checkbtn{
-    /* Al final el float right sobraba, estaba ya hecho con el flexbox y no me di cuenta xD */
+    /* Al final el float right sobraba, estaba ya hecho con el flexbox y no me di cuenta*/
 
     font-size: 2rem;
     margin-right: 8rem;
