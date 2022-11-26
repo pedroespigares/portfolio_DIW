@@ -1,11 +1,20 @@
+
+/* La mayoria de media querys (quitando la primera y segunda con el menu hamburguesa) 
+se basan en ir reduciendo los tamaños de la fuente y ajustando espacios */
+
 @media screen and (max-width: 460px){
+
+    /* Este media screen es para dispositivos moviles (e incluso dispositivos 
+    un poco mas grandes) */
 
     header a{
         width: 70%;
     }
 
 
+    /* Hacemos los titulos de las secciones mas puequeños y ajustamos espacios */
     h2{
+        /* El !important es porque si no lo ponia no funcionaba, ns exactamente por que. */
         font-size: 4em !important;
         font-weight: 700;
         margin-bottom: 5rem;
@@ -27,11 +36,17 @@
         font-size: 6rem !important;
     }
 
+
+/* ----------------------------------------------------------------------------------------- */
+
+    /* De aquí hasta el proximo separador son los estilos para el menu hamburguesa */
+
     .checkbtn{
         display: block;
     }
 
     .fixed_position{
+        /* Esto es para que cuando aparezca la lista del menu hamburguesa no se pueda scrollear */
         overflow: hidden;
     }
 
@@ -101,6 +116,9 @@
         transition: transform 0.4s ease-in-out;
     }
     
+    /* Aqui hacemos la animacion de transformar la hamburguesa en una X.
+    El cuando se transforma lo controlo mediante clases en Jquery */
+
     .open .line1 {
         transform: rotate(47deg);
     }
@@ -113,10 +131,18 @@
         transform: rotate(-47deg);
     }
 
+/* ----------------------------------------------------------------------------------------- */
+
+    /* Al final el aside lo deje fijo en 5vw, pero para este media query simplemente hago
+    los iconos mas pequeños. El padding descolocaba el aside al scrollear y ns por que el 
+    calc() no funcionaba a partir de ~390 pixeles */
+
     aside i{
         scale: 2.5;
     }
 
+    /* Cambiamos la direccion del flex a column y ajustamos los padding
+    y margenes de los textos */
     #about{
         flex-flow: column wrap;
         gap: 0px;
@@ -148,6 +174,9 @@
         font-size: 0.7em;
         padding-top: 0.4em;
     }
+
+
+    /* Al cambiar el flexbox de projects a column, necesitamos bastante mas espacio para dicho section */
 
     #projects{
         height: 200vh;
@@ -193,6 +222,8 @@
     .progress-bar{
         width: 100%;
     }
+
+    /* Ajustamos los titulos de algunos section para corregir sus espacios */
 
     #skills h2, #services h2, #testimonials h2, #contact h2{
         margin-bottom: 0;
@@ -281,10 +312,17 @@
 
 
 @media screen and (min-width:460px) and (max-width: 660px){
+
+    /* Media query dede 460 hasta 660 (muy parecido al anterior) */
+
+    aside i{
+        scale: 2.7;
+    }
+
     h2{
         font-size: 5rem;
         font-weight: 700;
-        margin-bottom: 5rem;
+        margin-bottom: 4rem;
         padding-top: 2rem;
     }
 
@@ -393,15 +431,21 @@
     #about{
         flex-flow: column nowrap;
         margin-top: -0.3rem;
+        height: 130vh;
     }
 
     #about img{
         width: 50%;
+        margin-top: 0;
     }
 
     .about-me--text{
         align-items: center;
         text-align: center;
+    }
+
+    .about-me--text p{
+        font-size: 1.8rem;
     }
 
     .p_percentage{
@@ -416,9 +460,84 @@
     div.single-work-container{
         width: 45vw;
     }
+
+    #skills{
+        height: 120vh;
+    }
+
+    #skills h3{
+        font-size: 3rem;
+    }
+
+    #services{
+        height: 255vh;
+    }
+
+    .servicesContainer{
+        width: 100%;
+        flex-direction: column;
+    }
+
+    div.single-service{
+        width: 80vw;
+        margin-bottom: 2rem;
+    }
+
+    div.service--title{
+        width: 100%;
+        gap: 3rem;
+    }
+
+    div.service--title h3, div.service--title i{
+        font-size: 2.3rem;
+    }
+
+    div.single-service p, div.single-service p span{
+        font-size: 1.7rem;
+    }
+
+    #testimonials{
+        height: 150vh;
+    }
+
+    .testimoniesContainer{
+        flex-flow: column wrap;
+    }
+
+    .singleTestimonie{
+        width: 75vw;
+        height: 30vh;
+        position: relative;
+        cursor: pointer;
+    }
+
+    .singleTestimonie img{
+        border-radius: 1rem;
+    }
+
+    .card--info{
+        font-size: 1.5rem;
+    }
+
+    #contact{
+        height: 125vh;
+    }
+
+    form{
+        width: 70%
+    }
+
+    form > input[type="submit"]{
+        width: 50%;
+    }
 }
 
 @media screen and (min-width: 660px) and (max-width: 1300px){
+
+    /* Media query para tablets principalmente */
+
+    /* Vamos a poner el menu debajo del titulo */
+    
     header{
         display: flex;
         flex-flow:  column nowrap;
@@ -438,10 +557,37 @@
         gap: 1.5em;
         margin-right: 7rem;
     }
+    
+    h2#title{
+        font-size: 6.5rem;
+    }
+
+    h2{
+        font-size: 5rem;
+        font-weight: 700;
+        margin-bottom: 4rem;
+        padding-top: 2rem;
+    }
+
+    div.service--title{
+        width: 100%;
+        gap: 3rem;
+    }
+
+    div.service--title h3, div.service--title i{
+        font-size: 2rem;
+    }
+
+    div.single-service p, div.single-service p span{
+        font-size: 1.5rem;
+    }
 }
 
 
 @media screen and (min-width: 1300px) and (max-width: 1600px){
+
+    /* Media query para pantallas de portatil */
+
     .logo h1{
         font-size: 2.3rem;
     }
@@ -473,15 +619,15 @@
     }
 
     .single-service p{
-        font-size: 1.5rem;
+        font-size: 1.8rem;
     }
     
     .single-service p span{
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
     
     .service--title h3, .service--title i{
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 
     #testimonials{
@@ -493,7 +639,7 @@
     }
 
     #contact{
-        height: 125vh;
+        height: 105vh;
     }
 
     form > label, form > input, form > textarea{

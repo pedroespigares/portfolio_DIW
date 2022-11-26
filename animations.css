@@ -1,3 +1,12 @@
+
+/* Este fichero contendrá unicamente las animaciones para tenerlas separadas
+del resto de estilos. 
+
+Hay una animacion para cada barra de progreso ya que,
+a no ser de que se repitan, cada uno de ellos hace la animacion hasta un ancho
+distinto (el que le corresponda). FE y BE se refiere a FrontEnd y BackEnd */
+
+
 @keyframes progressBarAnimation_FE_1 {
     from {
       width: 0%;
@@ -69,6 +78,11 @@
       width: 35%;
     }
 }
+
+
+/* Esta animacion es utilizada en la seccion #about para darle un efecto
+de "aparición". También es utilizada en el porcentaje de las barras de progreso,
+para que vayan apareciendo a la vez que la barra va agrandando. */
 
 @keyframes opacityAnimation{
     from{

@@ -98,6 +98,8 @@ header{
     opacity: 0.8;
 }
 
+/* Estilos del menu de navegacion */
+
 ul.menu{
     display: flex;
     gap: 2.5em;
@@ -135,12 +137,12 @@ ul.menu li a:active{
 }
 
 .checkbtn{
-    float: right;
+    /* Al final el float right sobraba, estaba ya hecho con el flexbox y no me di cuenta xD */
+
     font-size: 2rem;
     margin-right: 8rem;
     cursor: pointer;
     line-height: 3.8em;
-    display: none;
 }
 
 /* ----------------------------------------------------------------------------------------- */
@@ -151,19 +153,17 @@ aside{
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    gap: 5em;
 
     width: 5vw;
     height: 100vh;
 
+    /* top:0 y position: sticky es para mantenerlo fijo */
     top: 0;
     position: sticky;
     
 
     background-color: var(--primary-color);
-}
-
-aside a.icon{
-    margin-bottom: 5em;
 }
 
 i{
@@ -301,6 +301,9 @@ div.single-work-container{
 }
 
 div.single-work-container img:hover{
+
+    /* Este box shadow es como un efecto de neon */
+
     box-shadow: 0px 1px 2px 0px var(--quaternary-color),
             1px 2px 4px 0px var(--quaternary-color),
             2px 4px 8px 0px var(--quaternary-color),
@@ -323,7 +326,7 @@ div.single-work-container img{
 
 div.single-work-container img[alt="Pong Game"]{
 
-    /* Le ponemos borde blanco ya que la imagen es negra y no se diferencia del bordo */
+    /* Le ponemos borde blanco ya que la imagen es negra y no se diferencia del fondo */
 
     border: 1px solid var(--secondary-color);
 }
@@ -367,6 +370,9 @@ div.single-work-container p{
 }
 
 .frontend-skills, .backend-skills{
+
+    /* Ponemos estilos a las dos "columnas" */
+
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -499,6 +505,13 @@ div.single-work-container p{
     color: var(--primary-color);
     background-color: var(--secondary-color);
     opacity: 0.9;
+
+    /* La posición relativa es para que siga el tamaño normal de la página */
+    position: relative;
+
+    /* El z index es para que tenga un indice mayor al por defecto */
+
+    z-index: 1;
 }
 
 .single-service p{
@@ -538,6 +551,36 @@ div.single-work-container p{
     color : var(--quaternary-color);
     font-size: 2rem;
     width: 10%;
+}
+
+.single-service::after,
+.single-service::before{
+
+    /* El z index es para que tenga un indice menor al texto y así no se sobreponga */
+
+    z-index: -1;
+    content: "";
+
+    /* La posición absoluta es para que el tamaño sea acorde con su padre */
+
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    /* Ancho=ancho de su padre */
+    
+    width: 100%;
+    height: 100%;
+    background-color: var(--tertiary-color);
+
+    /* El transform scale a 0 es para que este invisible hasta que se active el hover */
+
+    transform: scaleX(0);
+    transition: transform 0.6s ease-in-out;
+}
+
+.single-service:hover::after{
+    transform: scaleX(1);
 }
 
 /* ----------------------------------------------------------------------------------------- */
@@ -581,6 +624,10 @@ div.single-work-container p{
     height: 100%;
 
     background-color: var(--primary-color);
+
+    /* Animacion para aparicion del texto descriptivo del testimonio (parecida a la de los servicios,
+    pero esta aparece por la izquierda y sobrepone el texto a la imagen)*/
+
     color: white;
     transform: scaleX(0);
     opacity: 0.8;
@@ -648,6 +695,8 @@ form > input[type="submit"]:hover{
     background-color: var(--secondary-color);
     color: var(--quaternary-color);
 }
+
+/* El unico valor que puede tener un valor no valido es el correo */
 
 input[name="email"]:invalid{
     border: 2px solid red;

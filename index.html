@@ -10,6 +10,9 @@
     <link rel="stylesheet" href="animations.css">
     <link rel="icon" type="image/x-icon" href="media/favicon.ico">
     <script src="https://kit.fontawesome.com/4328465e5b.js" crossorigin="anonymous"></script>
+
+    <!-- El siguiente script es para poder usar jquery -->
+
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="script.js"></script>
 </head>
@@ -34,6 +37,7 @@
                 <h1>Pedro Espigares</h1>
             </a>
             <nav>
+                <!-- Div para el menu hamburguesa -->
                 <div class="checkbtn">
                     <div class="hamburger-lines">
                         <span class="line line1"></span>
@@ -52,6 +56,10 @@
                 </ul>
             </nav>
         </header>
+
+        <!-- Cada apartado de la pagina (About me, my works, etc.) seran los sections en html -->
+        <!-- Como pone en el enunciado, practicamente todo esta solucionado con flexbox  y 
+            animaciones (que en css comentare lo que he hecho)-->
 
         <section id="home">
             <div class="homeContainer">
@@ -303,7 +311,10 @@
                     <label for="name">Your Name</label>
                     <input type="text" name="name" required/>
                     <label for="email">Your Email</label>
-                    <input type="text" name="email" placeholder="email@domain.com" required/>
+
+                    <!-- En vez de utilizar un pattern para el correo, he utilizado el type email ya que hace lo mismo -->
+
+                    <input type="email" name="email" placeholder="email@domain.com" required/>
                     <label for="subject">Subject</label>
                     <input type="text" name="subject" required/>
                     <label for="message">Your Message</label>

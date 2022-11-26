@@ -1,4 +1,4 @@
-// function to detect if an element is scrolled into view
+// Function para detectar si un elemento ha sido scrolleado a la vista
 
 function isScrolledIntoView(elem)
 {
@@ -26,13 +26,15 @@ $(document).ready(function() {
 
 });
 
-// listen for scroll event
+// Escucha del evento de scroll
 
 $(window).scroll(function () {
-  // check if element is scrolled into view
+  // Comprobamos si el elemento ha sido scrolleado a la vista
 
   if (isScrolledIntoView($('#html'))) {
-    // element is scrolled into view, add animation class
+    // Si es así, añadimos la clase correspondiente a la animacion al elemento.
+    // Si queremos que al salir de la vista se quite la clase, añadimos un else con la funcion removeClass
+    // Haciendo esto conseguimos que la animacion se ejecute cada vez que el elemento entra en la vista
 
     $('#html').addClass('progress-bar--html');
   } else{
@@ -86,6 +88,8 @@ $(window).scroll(function () {
   } else{
     $('.p_percentage').removeClass('opacity_animation');
   }
+
+  // A la animacion de aparicion del about me no le ponemos un else porque queremos que se quede visible una vez que se ha mostrado
 
   if(isScrolledIntoView($('.about-me--text'))) {
     $('.about-me--text').addClass('opacity_animation_mini');
